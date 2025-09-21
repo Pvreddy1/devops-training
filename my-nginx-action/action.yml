@@ -1,0 +1,16 @@
+name: "Custom Docker Build Action"
+description: "Builds a Docker image inside GitHub Actions"
+author: "Your Name"
+
+inputs:
+  image_name:
+    description: "The name of the Docker image to build"
+    required: true
+  context_path:
+    description: "The build context path (default is .)"
+    required: false
+    default: "."
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
